@@ -1,6 +1,6 @@
 {
-  "name": "norm-monorepo",
-  "description": "fe6 的代码规范集合",
+  "name": "@fe6/nvcr",
+  "description": "Vue 3.x 组件库按需加载的配置",
   "scripts": {
     "dev": "tsup src/*.ts --watch src",
     "build": "tsup src/*.ts && esno scripts/postbuild.ts",
@@ -9,11 +9,10 @@
     "prepublishOnly": "pnpm build",
     "release": "bumpp --commit --tag --push"
   },
-  "engines": {
-    "node": ">= 16"
-  },
   "author": "李梦龙 <649076408@qq.com>",
-  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "bugs": {
     "url": "https://github.com/fe6/norm/issues"
   },
@@ -46,13 +45,14 @@
     },
     "./*": "./*"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
   "publishConfig": {
     "access": "public"
   },
   "packageManager": "pnpm@6.32.0",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 16"
+  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-customizable"
