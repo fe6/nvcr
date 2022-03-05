@@ -1,6 +1,6 @@
 {
   "name": "@fe6/nvcr",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Vue 3.x 组件库按需加载的配置",
   "scripts": {
     "dev": "tsup src/*.ts --watch src",
