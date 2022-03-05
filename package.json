@@ -15,9 +15,9 @@
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "bugs": {
-    "url": "https://github.com/fe6/norm/issues"
+    "url": "https://github.com/fe6/nvcr/issues"
   },
-  "homepage": "https://github.com/fe6/norm#readme",
+  "homepage": "https://github.com/fe6/nvcr#readme",
   "devDependencies": {
     "@commitlint/cli": "^16.2.1",
     "@commitlint/config-conventional": "^16.2.1",
