@@ -1,0 +1,64 @@
+{
+  "name": "norm-monorepo",
+  "description": "fe6 的代码规范集合",
+  "scripts": {
+    "dev": "tsup src/*.ts --watch src",
+    "build": "tsup src/*.ts && esno scripts/postbuild.ts",
+    "lint": "pretty-quick",
+    "husky": "husky install",
+    "prepublishOnly": "pnpm build",
+    "release": "bumpp --commit --tag --push"
+  },
+  "engines": {
+    "node": ">= 16"
+  },
+  "author": "李梦龙 <649076408@qq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fe6/norm/issues"
+  },
+  "homepage": "https://github.com/fe6/norm#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.1",
+    "@commitlint/config-conventional": "^16.2.1",
+    "@fe6/norm-git-cz-config": "^0.1.1",
+    "@fe6/norm-prettier": "^0.1.0",
+    "bumpp": "^7.1.1",
+    "conventional-changelog-cli": "^2.2.2",
+    "cz-customizable": "^6.3.0",
+    "esno": "^0.14.1",
+    "fast-glob": "^3.2.11",
+    "husky": "^7.0.2",
+    "prettier": "^2.5.1",
+    "pretty-quick": "^3.1.3",
+    "tsup": "^5.11.13",
+    "typescript": "^4.6.2",
+    "unplugin-vue-components": "^0.17.21",
+    "vue": "^3.2.31"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./*": "./*"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "pnpm@6.32.0",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "./node_modules/@fe6/norm-git-cz-config/customizable.js"
+    }
+  }
+}
