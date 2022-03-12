@@ -53,7 +53,7 @@ export const matchComponents: IMatcher[] = [
     styleDir: "dropdown",
   },
   {
-    pattern: /^Form/,
+    pattern: /^Form$/,
     styleDir: "form",
   },
   {
@@ -85,7 +85,7 @@ export const matchComponents: IMatcher[] = [
     styleDir: "menu",
   },
   {
-    pattern: /^Table/,
+    pattern: /^Table$/,
     styleDir: "table",
   },
   {
@@ -121,7 +121,7 @@ export const matchComponents: IMatcher[] = [
     styleDir: "skeleton",
   },
   {
-    pattern: /^Select/,
+    pattern: /^Select$/,
     styleDir: "select",
   },
   {
@@ -129,7 +129,7 @@ export const matchComponents: IMatcher[] = [
     styleDir: "tree-select",
   },
   {
-    pattern: /^Tree|^DirectoryTree/,
+    pattern: /^Tree$|^DirectoryTree$/,
     styleDir: "tree",
   },
   {
@@ -141,11 +141,11 @@ export const matchComponents: IMatcher[] = [
     styleDir: "timeline",
   },
   {
-    pattern: /^Upload/,
+    pattern: /^Upload$/,
     styleDir: "upload",
   },
   {
-    pattern: /^TagGroup/,
+    pattern: /^TagGroup$/,
     styleDir: "tag-group",
   },
   {
